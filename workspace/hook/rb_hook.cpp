@@ -1,7 +1,5 @@
 #include "../includes.h"
 
-// shade ud (ultra detected) IC method
-
 void ic_hook::instrumentation_callback( ic_ctx* ctx ) 
 {
 	std::uintptr_t KiUserCallbackDispatcher = 0x6EE96EE96EE96EE9;
