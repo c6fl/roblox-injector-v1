@@ -52,8 +52,7 @@ int _main( int argc, const char** argv )
 	if ( argc != 2 ) return std::printf( "no module.\r\n" ), 'BILL';
 
 	printf( "RAIN Injector V1 loaded" );
-	printf( "roka's gay btw" );
-
+	
 	std::string dll_path = argv[ 1 ];
 	if ( _stricmp( dll_path.substr( dll_path.size( ) - 4, 4 ).c_str( ), ".dll" ) != 0 ) return std::printf( "Module is not a dll file.\r\n" ), 'BILL';
 
@@ -120,7 +119,6 @@ int _main( int argc, const char** argv )
 		}
 	}
 
-	// parse fucking relocations oh my god i hate this fucking PART!
 #define RELOC_FLAG(rel_info) ((rel_info >> 0xC) == IMAGE_REL_BASED_DIR64)
 	auto rbx_dll_alloc = reinterpret_cast< std::uint8_t* >( VirtualAllocEx( rbx_handle, NULL, virtual_size, MEM_COMMIT, PAGE_READWRITE ) );
 
